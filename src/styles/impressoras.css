@@ -1,0 +1,608 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background: #f5a623;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background: #f0ebe0;
+  font-family: "Source Sans 3", sans-serif;
+  color: #2c2c2c;
+  font-size: 17px;
+}
+
+/* ── Navbar ── */
+.impressora-navbar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  height: 68px;
+  gap: 8px;
+}
+.impressora-navbar-logo img {
+  height: 46px;
+  display: block;
+  margin-right: 20px;
+}
+.impressora-nav-menus {
+  display: flex;
+  gap: 2px;
+}
+
+.impressora-nav-menu-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: #3a3a3a;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s;
+}
+.impressora-nav-menu-btn:hover {
+  background: #f0ebe0;
+}
+.impressora-nav-menu-btn.active {
+  background: #e8f0e8;
+  color: #1a4a1a;
+  font-weight: 700;
+}
+
+.impressora-nav-right {
+  margin-left: auto;
+}
+.impressora-nav-right button {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 7px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  color: #444;
+}
+.impressora-nav-right button:hover {
+  background: #f0ebe0;
+}
+
+/* ── Dropdown ── */
+.impressora-dropdown-wrapper {
+  position: relative;
+}
+.impressora-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+  min-width: 210px;
+  padding: 6px 0;
+}
+.impressora-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  color: #1a4a1a;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.impressora-dropdown-menu a:hover {
+  background: #f0ebe0;
+}
+
+/* ── Container ── */
+.impressora-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 28px 48px;
+}
+
+.impressora-breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 18px;
+}
+.impressora-breadcrumb span {
+  color: #2d6a2d;
+  font-weight: 600;
+}
+
+.impressora-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #d0c8b8;
+}
+.impressora-page-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Botões ── */
+.impressora-btn-add {
+  background: #2d7a2d;
+  color: #fff;
+  border: none;
+  padding: 11px 26px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.impressora-btn-add:hover {
+  background: #1e5e1e;
+}
+
+.impressora-btn-pesquisar {
+  background: #1a4a1a;
+  color: #fff;
+  border: none;
+  padding: 11px 26px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.impressora-btn-pesquisar:hover {
+  background: #0f2e0f;
+}
+
+/* ── Card ── */
+.impressora-card {
+  background: #fff;
+  border: 1px solid #d8d0c0;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.impressora-card-body {
+  padding: 20px 28px;
+}
+
+/* ── Filtro ── */
+.impressora-filter-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.impressora-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.impressora-form-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+.impressora-form-select {
+  border: 1px solid #c8bfb0;
+  border-radius: 4px;
+  padding: 10px 36px 10px 14px;
+  font-size: 16px;
+  background: #fff;
+  color: #3a3a3a;
+  font-family: inherit;
+  min-width: 260px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+.impressora-form-select:focus {
+  outline: none;
+  border-color: #2d7a2d;
+}
+
+/* ── Tabela ── */
+.impressora-table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0 14px;
+  font-size: 15px;
+  color: #777;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.impressora-per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.impressora-per-page select {
+  border: 1px solid #c8bfb0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+}
+.impressora-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.impressora-search-box input {
+  border: 1px solid #c8bfb0;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+  width: 240px;
+}
+.impressora-search-box input:focus {
+  outline: none;
+  border-color: #2d7a2d;
+}
+
+.impressora-table-wrap {
+  overflow-x: auto;
+}
+.impressora-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.impressora-table thead tr {
+  background: #f5f0e8;
+  border-bottom: 2px solid #c8bfb0;
+}
+.impressora-table th {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #3a3a3a;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+.impressora-table th:hover {
+  color: #1a4a1a;
+}
+.impressora-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ede8dc;
+  color: #2c2c2c;
+}
+.impressora-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.impressora-table tbody tr:hover td {
+  background: #faf7f0;
+}
+.impressora-table tbody tr {
+  animation: impressoraFadeIn 0.2s ease both;
+}
+
+@keyframes impressoraFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.impressora-cell-num {
+  color: #aaa;
+  font-size: 14px;
+  width: 40px;
+}
+.impressora-cell-pat {
+  font-weight: 700;
+  color: #1a4a1a;
+}
+
+/* ── Badges ── */
+.impressora-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.impressora-badge-laser {
+  background: #d4edda;
+  color: #155724;
+}
+.impressora-badge-jato {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+.impressora-badge-outro {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+/* ── Ações ── */
+.impressora-acoes {
+  display: flex;
+  gap: 8px;
+}
+.impressora-btn-editar {
+  background: #e8f4e8;
+  border: 1px solid #a8d5a8;
+  color: #1a5a1a;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.impressora-btn-editar:hover {
+  background: #c8e8c8;
+  border-color: #2d7a2d;
+}
+.impressora-btn-excluir {
+  background: #fde8e8;
+  border: 1px solid #f5a8a8;
+  color: #8b1a1a;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.impressora-btn-excluir:hover {
+  background: #fbc8c8;
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+.impressora-table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0 0;
+  font-size: 14px;
+  color: #888;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.impressora-empty-row td {
+  text-align: center;
+  padding: 48px;
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* ── Modal base ── */
+.impressora-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+/* ── Modal excluir ── */
+.impressora-modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 36px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.impressora-modal-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+.impressora-modal h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+.impressora-modal p {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.impressora-modal-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ── Modal cadastro ── */
+.impressora-modal-cadastro {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 36px;
+  max-width: 520px;
+  width: 95%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.impressora-modal-cadastro h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+  border-bottom: 2px solid #d0c8b8;
+  padding-bottom: 12px;
+}
+
+/* ── Campos do modal ── */
+.impressora-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.impressora-campo label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+.impressora-campo input,
+.impressora-campo select {
+  border: 1px solid #c8bfb0;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #fff;
+  color: #2c2c2c;
+  transition: border-color 0.15s;
+}
+.impressora-campo input:focus,
+.impressora-campo select:focus {
+  outline: none;
+  border-color: #2d7a2d;
+}
+.impressora-campo input.erro,
+.impressora-campo select.erro {
+  border-color: #c0392b;
+}
+.impressora-campo .msg-erro {
+  font-size: 13px;
+  color: #c0392b;
+}
+
+.impressora-modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #ede8dc;
+}
+
+/* ── Botões do modal ── */
+.impressora-btn-cancel {
+  background: #f0ebe0;
+  border: 1px solid #c8bfb0;
+  color: #444;
+  padding: 10px 26px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+}
+.impressora-btn-cancel:hover {
+  background: #e0dbd0;
+}
+
+.impressora-btn-excluir-confirm {
+  background: #c0392b;
+  border: none;
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+.impressora-btn-excluir-confirm:hover {
+  background: #a93226;
+}
+
+.impressora-btn-salvar {
+  background: #2d7a2d;
+  color: #fff;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.impressora-btn-salvar:hover {
+  background: #1e5e1e;
+}
+.impressora-btn-salvar:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
